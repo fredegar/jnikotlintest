@@ -6,7 +6,7 @@ mkdir -p ./c/build
 clang -shared \
 -v \
 -o c/build/libHello.dylib \
--I /Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home/include \
--I /Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home/include/darwin \
+-I $JAVA_HOME/include \
+-I $JAVA_HOME/include/darwin \
 c/src/*.c \
 -fPIC
